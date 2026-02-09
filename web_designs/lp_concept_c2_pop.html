@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スマート・プライサー | 商売繁盛！わいわい値付け！</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FFF9C4;
+            --primary-color: #FF9800;
+            --accent-color: #F44336;
+            --text-color: #5D4037;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero-banner {
+            background-color: var(--white);
+            border: 8px solid var(--primary-color);
+            border-radius: 40px;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero-banner img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .pop-text {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .btn-pop {
+            display: inline-block;
+            padding: 1.2rem 4rem;
+            background-color: var(--accent-color);
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-decoration: none;
+            border-radius: 100px;
+            box-shadow: 0 6px 0 #B71C1C;
+            transition: transform 0.1s;
+        }
+
+        .btn-pop:active {
+            transform: translateY(6px);
+            box-shadow: none;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .pop-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 30px;
+            text-align: center;
+            border: 4px solid var(--primary-color);
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">わいわい！スマート・プライサー</div>
+    <div class="container">
+        <div class="hero-banner">
+            <img src="images/hero_c2.png" alt="Pop Shopping Street Illustration">
+            <h1>値付け爆速！商売繁盛！</h1>
+            <p class="pop-text">「いくらだっけ？」を「カシャッ」で解決！<br>。毎日がもっと楽しくなる魔法のアプリ！</p>
+            <a href="#" class="btn-pop">今すぐ使ってみる！</a>
+        </div>
+
+        <div class="grid">
+            <div class="pop-card">
+                <div class="icon">✨</div>
+                <h3>スキャンが快感！</h3>
+                <p>ハイテクOCRで一瞬読み取り！。爽快感バツグンですよ！</p>
+            </div>
+            <div class="pop-card">
+                <div class="icon">💰</div>
+                <h3>利益ガッチリ！</h3>
+                <p>損してない？。計算はアプリにお任せ、。ガッチリ稼いじゃおう！</p>
+            </div>
+        </div>
+    </div>
+    <footer style="text-align: center; padding: 4rem; color: var(--primary-color); font-weight: 800;">
+        (C) 2026 爆速値付け隊！
+    </footer>
+</body>
+
+</html>

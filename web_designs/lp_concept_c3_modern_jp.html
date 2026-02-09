@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スマート・プライサー | 伝統を、デジタルの技で支える</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FDFCF0;
+            /* 和紙の色 */
+            --primary-color: #001F43;
+            /* 勝ち色・藍 */
+            --accent-color: #B22222;
+            /* 丹生・朱 */
+            --text-color: #1C1C1C;
+        }
+
+        body {
+            font-family: 'Shippori Mincho', serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            background-image: url('https://www.transparenttextures.com/patterns/p6.png');
+            /* 控えめな紙テクスチャ */
+        }
+
+        .top-bar {
+            height: 10px;
+            background: linear-gradient(90deg, var(--primary-color) 50%, var(--accent-color) 50%);
+        }
+
+        header {
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .logo-jp {
+            font-size: 2rem;
+            font-weight: 700;
+            border-bottom: 2px solid var(--primary-color);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding-bottom: 5rem;
+        }
+
+        .hero-jp {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        .hero-jp img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            padding: 5px;
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .content-box {
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid var(--primary-color);
+            position: relative;
+            margin-top: -50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            height: 250px;
+            margin: 0 auto 2rem;
+            display: block;
+        }
+
+        .desc-text {
+            text-align: justify;
+            margin-top: 2rem;
+        }
+
+        .cta-jp {
+            display: block;
+            width: fit-content;
+            margin: 3rem auto;
+            padding: 1.2rem 4rem;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .cta-jp:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 4rem 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            letter-spacing: 0.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar"></div>
+    <header>
+        <div class="logo-jp">智慧の値付け。</div>
+    </header>
+
+    <div class="container">
+        <div class="hero-jp">
+            <img src="images/hero_c3.png" alt="Traditional Japanese Greengrocer">
+        </div>
+
+        <div class="content-box">
+            <h1>。凛として、商う。</h1>
+            <div class="desc-text">
+                <p>代々受け継いできた目利き。その誇りを、デジタルの技で支えます。<br>
+                    複雑な利益計算は、。瞬時に「智慧」へと変換。<br>
+                    店主の想いを裏切らない、凛とした値付けを。</p>
+            </div>
+            <a href="#" class="cta-jp">その技を、より速く。</a>
+        </div>
+    </div>
+
+    <footer>
+        謹製：スマート・プライサー // 伝統と革新の融合を、。
+    </footer>
+</body>
+
+</html>

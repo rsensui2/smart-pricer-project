@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スマート・プライサー | 値付けの「迷い」をゼロにする</title>
+    <meta name="description" content="仕入れ伝票を撮るだけで、最適な売値を自動計算。小売店の利益を守り、現場の時間を創出する「スマート・プライサー」。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #003366; /* 信頼のネイビー */
+            --accent-color: #D32F2F; /* 強調の赤 */
+            --bg-color: #F5F7FA;
+            --text-color: #333333;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--white);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: opacity 0.3s;
+        }
+
+        .cta-button:hover {
+            opacity: 0.9;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            max-height: 500px;
+            object-fit: cover;
+        }
+
+        /* Features */
+        .features {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            text-align: left;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .feature-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        /* Proof/Trust */
+        .proof {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .proof h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #888;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Smart Pricer</div>
+        <a href="#" class="cta-button">無料で試す</a>
+    </header>
+
+    <section class="hero">
+        <h1>値付けの「迷い」をゼロにする</h1>
+        <p>長年の経験と勘に頼っていた価格設定を、デジタルの力で確実に。<br>
+        利益を確保し、商売を次世代へ繋ぐための最もシンプルなパートナー。</p>
+        <img src="images/hero_a.png" alt="信頼できる店主がスマホで値付けをしている様子" class="hero-image">
+        <a href="#" class="cta-button">資料をダウンロード</a>
+    </section>
+
+    <section class="features">
+        <h2 class="section-title">選ばれる3つの理由</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>01. 伝票を撮るだけ</h3>
+                <p>面倒な入力作業は一切不要。スマートフォンのカメラで仕入れ伝票を撮影するだけで、品名と原価を自動で読み取ります。老眼鏡をかける手間も省けます。</p>
+            </div>
+            <div class="feature-card">
+                <h3>02. 利益が見える安心感</h3>
+                <p>「この価格で売って大丈夫か？」という不安を解消。店舗ごとに設定した適正利益率に基づき、自動で推奨価格を表示します。</p>
+            </div>
+            <div class="feature-card">
+                <h3>03. 誰でも使える簡単操作</h3>
+                <p>ボタンは大きく、画面はシンプルに。PC操作が苦手な方でも、直感的に使えるよう設計されています。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="proof">
+        <h2>あなたの「商い」を、もっと自由に。</h2>
+        <p>計算にかかる時間をゼロにして、お客様との会話を楽しみましょう。</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Smart Pricer Project. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

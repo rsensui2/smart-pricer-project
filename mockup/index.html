@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Pricer Mockup</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="presentation-wrapper">
+        <div class="phone-frame">
+            <div class="notch">
+                <div class="camera"></div>
+                <div class="speaker"></div>
+            </div>
+
+            <div class="side-button silent-switch"></div>
+            <div class="side-button volume-up"></div>
+            <div class="side-button volume-down"></div>
+            <div class="side-button power"></div>
+
+            <div class="screen">
+                <!-- Status Bar -->
+                <div class="status-bar">
+                    <div class="time">9:41</div>
+                    <div class="icons">
+                        <i class="fas fa-signal"></i>
+                        <i class="fas fa-wifi"></i>
+                        <i class="fas fa-battery-full"></i>
+                    </div>
+                </div>
+
+                <!-- App Header -->
+                <header class="app-header">
+                    <div class="header-left">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="header-title">Smart Pricer</div>
+                    <div class="header-right">
+                        <div class="user-avatar">
+                            <img src="https://ui-avatars.com/api/?name=User&background=0D8ABC&color=fff" alt="User">
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Main Content Area -->
+                <main id="app-content">
+                    <!-- Screen 1: Home / Scan (Default) -->
+                    <div id="screen-home" class="screen-view active">
+                        <div class="camera-view-container">
+                            <div class="camera-overlay">
+                                <div class="scan-frame">
+                                    <div class="scan-corner top-left"></div>
+                                    <div class="scan-corner top-right"></div>
+                                    <div class="scan-corner bottom-left"></div>
+                                    <div class="scan-corner bottom-right"></div>
+                                    <div class="scan-line"></div>
+                                </div>
+                                <div class="scan-instruction">伝票をスキャンしてください</div>
+                            </div>
+                            <!-- Simulated Camera Feed Background -->
+                            <div class="camera-feed"></div>
+                        </div>
+                        <div class="floating-action-button" id="btn-scan">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <div class="recent-history">
+                            <h3>最近の履歴</h3>
+                            <div class="history-item">
+                                <span class="item-name">キャベツ</span>
+                                <span class="item-price">¥128</span>
+                            </div>
+                            <div class="history-item">
+                                <span class="item-name">トマト(箱)</span>
+                                <span class="item-price">¥1,200</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Screen 2: Processing (Loading) -->
+                    <div id="screen-processing" class="screen-view">
+                        <div class="processing-content">
+                            <div class="spinner"></div>
+                            <p>AI解析中...</p>
+                            <div class="loading-steps">
+                                <div class="step completed"><i class="fas fa-check"></i> 文字認識</div>
+                                <div class="step completed"><i class="fas fa-check"></i> 商品特定</div>
+                                <div class="step active"><i class="fas fa-circle-notch fa-spin"></i> 価格算出</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Screen 3: Pricing Result -->
+                    <div id="screen-result" class="screen-view">
+                        <div class="product-info-card">
+                            <div class="product-image-placeholder">
+                                <i class="fas fa-carrot"></i>
+                            </div>
+                            <div class="product-details">
+                                <h2 class="product-name">大根 (Lサイズ)</h2>
+                                <p class="purchase-cost">仕入れ原価: <span class="cost-value">¥80</span></p>
+                            </div>
+                        </div>
+
+                        <div class="pricing-control-panel">
+                            <div class="price-display-large">
+                                <span class="currency">¥</span><span id="display-price">120</span>
+                            </div>
+
+                            <div class="slider-container">
+                                <input type="range" min="80" max="200" value="120" class="price-slider"
+                                    id="price-slider">
+                            </div>
+
+                            <div class="metrics-grid">
+                                <div class="metric-item">
+                                    <span class="metric-label">粗利率</span>
+                                    <span class="metric-value" id="profit-margin">33.3%</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">粗利益</span>
+                                    <span class="metric-value" id="profit-amount">¥40</span>
+                                </div>
+                            </div>
+
+                            <div class="ai-suggestion">
+                                <div class="suggestion-badge"><i class="fas fa-robot"></i> AI推奨</div>
+                                <p>近隣平均価格 ¥128 より少し安く設定することで回転率アップが見込めます。</p>
+                            </div>
+                        </div>
+
+                        <div class="action-buttons">
+                            <button class="btn btn-secondary" id="btn-cancel">キャンセル</button>
+                            <button class="btn btn-primary" id="btn-print">
+                                <i class="fas fa-print"></i> 値札発行
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Screen 4: Printing Success -->
+                    <div id="screen-success" class="screen-view">
+                        <div class="success-content">
+                            <div class="success-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h2>発行完了!</h2>
+                            <p>値札シールを貼り付けてください</p>
+                            <div class="printed-label-mock">
+                                <div class="label-store-name">梶原青果</div>
+                                <div class="label-product-name">大根 (L)</div>
+                                <div class="label-price">¥120<span class="tax">(税込)</span></div>
+                                <div class="label-barcode">||||||||||||||</div>
+                            </div>
+                            <button class="btn btn-primary full-width" id="btn-next-scan">次の商品へ</button>
+                        </div>
+                    </div>
+
+                </main>
+
+                <!-- App Footer -->
+                <nav class="app-footer">
+                    <a href="#" class="nav-item active">
+                        <i class="fas fa-home"></i>
+                        <span>ホーム</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-list"></i>
+                        <span>履歴</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>分析</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-cog"></i>
+                        <span>設定</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Home Bar Indicator -->
+            <div class="home-indicator"></div>
+        </div>
+
+        <div class="presentation-info">
+            <h1>Smart Pricer</h1>
+            <p>AI値付け効率化ソリューション</p>
+            <p class="instruction">画面内のカメラボタンを押して体験を開始してください</p>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

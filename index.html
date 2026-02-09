@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Pricer - Project Portal</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+        }
+
+        .hero-pattern {
+            background-color: #0f172a;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="hero-pattern text-white py-16 shadow-lg">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Smart Pricer</h1>
+            <p class="text-xl md:text-2xl font-light text-blue-200">値付け効率化ソリューション プロジェクト成果物一覧</p>
+            <p class="mt-4 text-gray-400 text-sm">Last Updated: 2026-02-09</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- 1. Concept Video -->
+        <section class="mb-16">
+            <div class="flex items-center mb-6">
+                <div class="bg-blue-600 w-1 h-8 mr-4 rounded"></div>
+                <h2 class="text-2xl font-bold text-gray-800">Mission & Vision</h2>
+            </div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 md:p-8">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="aspect-w-16 aspect-h-9 bg-black rounded-lg overflow-hidden shadow-lg">
+                        <video controls class="w-full h-full object-cover">
+                            <source src="スマート・プライサー：値付けの20秒革命.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">スマート・プライサー：値付けの20秒革命</h3>
+                        <p class="text-gray-600 mb-4">
+                            毎朝の激務である「値付け」を、AIとスマホで劇的に効率化する。<br>
+                            そのビジョンと、現場での利用イメージを描いたコンセプトムービーです。
+                        </p>
+                        <div class="inline-block bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold">
+                            <i class="fas fa-play-circle mr-2"></i>Play Video
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. App Mockup -->
+        <section class="mb-16">
+            <div class="flex items-center mb-6">
+                <div class="bg-green-500 w-1 h-8 mr-4 rounded"></div>
+                <h2 class="text-2xl font-bold text-gray-800">App Experience</h2>
+            </div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div class="md:flex">
+                    <div class="md:w-1/3 bg-gray-100 flex justify-center items-center p-8">
+                        <i class="fas fa-mobile-alt text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="p-8 md:w-2/3">
+                        <div class="uppercase tracking-wide text-sm text-green-500 font-semibold mb-1">Interactive
+                            Prototype</div>
+                        <h3 class="block mt-1 text-xl leading-tight font-bold text-black">スマホアプリ モックアップ</h3>
+                        <p class="mt-2 text-gray-600">
+                            iPhone筐体を再現したHTMLモックアップです。カメラでのスキャンから、AIによる価格提案、利益シミュレーション、ラベル発行までの一連のUXを体験できます。
+                        </p>
+                        <div class="mt-6">
+                            <a href="mockup/index.html" target="_blank"
+                                class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg inline-flex items-center transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i> デモを試す
+                            </a>
+                            <span class="ml-4 text-sm text-gray-500"><i
+                                    class="fas fa-info-circle mr-1"></i>スマホまたはPCブラウザで動作します</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Web Designs -->
+        <section class="mb-16">
+            <div class="flex items-center mb-6">
+                <div class="bg-purple-500 w-1 h-8 mr-4 rounded"></div>
+                <h2 class="text-2xl font-bold text-gray-800">Web Design Concepts</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Concept A -->
+                <a href="web_designs/lp_concept_a_reliability.html" target="_blank"
+                    class="group block bg-white rounded-xl shadow-md overflow-hidden hover:ring-2 hover:ring-purple-500 transition-all">
+                    <div class="h-40 bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <span class="text-4xl text-gray-300 group-hover:scale-110 transition-transform"><i
+                                class="fas fa-shield-alt"></i></span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-2">Concept A: Reliability</h3>
+                        <p class="text-sm text-gray-600">「信頼と実績」をテーマにした、堅実でプロフェッショナルなデザイン案。</p>
+                    </div>
+                </a>
+
+                <!-- Concept B -->
+                <a href="web_designs/lp_concept_b_tech.html" target="_blank"
+                    class="group block bg-white rounded-xl shadow-md overflow-hidden hover:ring-2 hover:ring-purple-500 transition-all">
+                    <div class="h-40 bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <span class="text-4xl text-gray-300 group-hover:scale-110 transition-transform"><i
+                                class="fas fa-microchip"></i></span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-2">Concept B: Tech & Future</h3>
+                        <p class="text-sm text-gray-600">「先進性と革新」を強調した、ダークモード基調のテック系デザイン案。</p>
+                    </div>
+                </a>
+
+                <!-- Concept C (Market) -->
+                <a href="web_designs/lp_concept_c_market.html" target="_blank"
+                    class="group block bg-white rounded-xl shadow-md overflow-hidden hover:ring-2 hover:ring-purple-500 transition-all">
+                    <div class="h-40 bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <span class="text-4xl text-gray-300 group-hover:scale-110 transition-transform"><i
+                                class="fas fa-leaf"></i></span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-2">Concept C: Market & Organic</h3>
+                        <p class="text-sm text-gray-600">「現場の活気と温かみ」を表現した、明るく親しみやすいデザイン案。</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 4. Documents -->
+        <section class="mb-16">
+            <div class="flex items-center mb-6">
+                <div class="bg-gray-500 w-1 h-8 mr-4 rounded"></div>
+                <h2 class="text-2xl font-bold text-gray-800">Documentation</h2>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <!-- PDF Downloads -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-bold mb-4 border-b pb-2">PDF資料</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="Smart_Pricing_Retail_Transformation.pdf" download
+                            class="flex items-center px-4 py-3 bg-red-50 text-red-700 rounded-lg hover:bg-red-100 transition-colors">
+                            <i class="fas fa-file-pdf mr-3 text-xl"></i>
+                            <div>
+                                <div class="font-bold text-sm">Retail Transformation</div>
+                                <div class="text-xs opacity-75">PDF Download</div>
+                            </div>
+                        </a>
+                        <a href="Smart_Pricer_Profit_Strategy.pdf" download
+                            class="flex items-center px-4 py-3 bg-red-50 text-red-700 rounded-lg hover:bg-red-100 transition-colors">
+                            <i class="fas fa-file-pdf mr-3 text-xl"></i>
+                            <div>
+                                <div class="font-bold text-sm">Profit Strategy</div>
+                                <div class="text-xs opacity-75">PDF Download</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Markdown Docs -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4 border-b pb-2">企画・仕様ドキュメント</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <a href="docs/01_エグゼクティブサマリー.md"
+                            class="flex items-center p-3 rounded hover:bg-gray-50 transition-colors text-blue-600 hover:text-blue-800">
+                            <i class="fas fa-file-alt w-6"></i>
+                            <span class="underline">01_エグゼクティブサマリー.md</span>
+                        </a>
+                        <a href="docs/02_ソリューションの概要.md"
+                            class="flex items-center p-3 rounded hover:bg-gray-50 transition-colors text-blue-600 hover:text-blue-800">
+                            <i class="fas fa-file-alt w-6"></i>
+                            <span class="underline">02_ソリューションの概要.md</span>
+                        </a>
+                        <a href="docs/03_実現のための仕組み.md"
+                            class="flex items-center p-3 rounded hover:bg-gray-50 transition-colors text-blue-600 hover:text-blue-800">
+                            <i class="fas fa-file-alt w-6"></i>
+                            <span class="underline">03_実現のための仕組み.md</span>
+                        </a>
+                        <a href="docs/04_サービス内容の詳細.md"
+                            class="flex items-center p-3 rounded hover:bg-gray-50 transition-colors text-blue-600 hover:text-blue-800">
+                            <i class="fas fa-file-alt w-6"></i>
+                            <span class="underline">04_サービス内容の詳細.md</span>
+                        </a>
+                        <a href="docs/05_ビジネスモデル.md"
+                            class="flex items-center p-3 rounded hover:bg-gray-50 transition-colors text-blue-600 hover:text-blue-800">
+                            <i class="fas fa-file-alt w-6"></i>
+                            <span class="underline">05_ビジネスモデル.md</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-gray-400 py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2026 Smart Pricer Project. All rights reserved.</p>
+            <p class="text-sm mt-2">Designed for Kajiwara-san</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
